@@ -13,3 +13,5 @@ if "%REBUILD%"=="" (
   :: We have to pin Python version to 3.6.7, until mkl supports Python 3.7
   call conda install -y -q python=3.6.7 numpy cffi pyyaml boto3
 )
+curl --retry 3 -kLO https://www.dropbox.com/s/blbxffkpee3rtlb/python-debug-libs.7z?dl=1 --output %TMP_DIR_WIN%\python-debug-libs.7z
+7z x %TMP_DIR_WIN%\python-debug-libs.7z -o"%CONDA_PARENT_DIR%\Miniconda3\libs"
