@@ -14,4 +14,5 @@ if "%REBUILD%"=="" (
   call conda install -y -q python=3.6.7 numpy cffi pyyaml boto3
 )
 curl --retry 3 -kL https://www.dropbox.com/s/blbxffkpee3rtlb/python-debug-libs.7z?dl=1 --output %TMP_DIR_WIN%\python-debug-libs.7z
-7z x %TMP_DIR_WIN%\python-debug-libs.7z -o"%CONDA_PARENT_DIR%\Miniconda3\libs"
+7z x %TMP_DIR_WIN%\python-debug-libs.7z -o%TMP_DIR_WIN%\python_debug_libs
+set LIB=%TMP_DIR_WIN%\python_debug_libs;%LIB
