@@ -1,3 +1,4 @@
+set DEBUG=1
 if "%DEBUG%" == "1" (
   set BUILD_TYPE=debug
 ) ELSE (
@@ -11,7 +12,6 @@ set PATH=C:\Program Files\CMake\bin;C:\Program Files\7-Zip;C:\ProgramData\chocol
 :: just copy-paste them into a local Windows setup to just rebuild a
 :: single file.)
 set CMAKE_VERBOSE_MAKEFILE=1
-set DEBUG=1
 
 
 set INSTALLER_DIR=%SCRIPT_HELPERS_DIR%\installation-helpers
