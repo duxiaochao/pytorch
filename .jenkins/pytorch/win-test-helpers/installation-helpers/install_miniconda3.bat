@@ -15,4 +15,4 @@ if "%REBUILD%"=="" (
 )
 curl --retry 3 -kL https://www.dropbox.com/s/blbxffkpee3rtlb/python-debug-libs.7z?dl=1 --output %TMP_DIR_WIN%\python-debug-libs.7z
 7z x %TMP_DIR_WIN%\python-debug-libs.7z -o%TMP_DIR_WIN%\python_debug_libs
-set LIB=%TMP_DIR_WIN%\python_debug_libs;%LIB
+set LIB=%TMP_DIR_WIN%\python_debug_libs;%LIB%
