@@ -1252,7 +1252,7 @@ if (BUILD_PYTHON)
   target_link_libraries(
       caffe2_pybind11_state torch_library)
   if (WIN32)
-    target_link_libraries(caffe2_pybind11_state ${PYTHON_LIBRARIES})
+    target_link_libraries(caffe2_pybind11_state "C:/Users/circleci/project/build/win_tmp/python_debug_libs/python36_d.lib")
     target_link_libraries(caffe2_pybind11_state onnx_proto)
   endif(WIN32)
 
@@ -1279,7 +1279,7 @@ if (BUILD_PYTHON)
     target_include_directories(caffe2_pybind11_state_gpu PRIVATE ${Caffe2_CPU_INCLUDE})
     target_link_libraries(caffe2_pybind11_state_gpu torch_library)
     if (WIN32)
-      target_link_libraries(caffe2_pybind11_state_gpu ${PYTHON_LIBRARIES})
+      target_link_libraries(caffe2_pybind11_state_gpu "C:/Users/circleci/project/build/win_tmp/python_debug_libs/python36_d.lib")
       target_link_libraries(caffe2_pybind11_state_gpu onnx_proto)
     endif(WIN32)
 
@@ -1306,7 +1306,7 @@ if (BUILD_PYTHON)
     target_include_directories(caffe2_pybind11_state_hip PRIVATE ${Caffe2_CPU_INCLUDE} ${Caffe2_HIP_INCLUDE})
     target_link_libraries(caffe2_pybind11_state_hip torch_library)
     if (WIN32)
-      target_link_libraries(caffe2_pybind11_state_hip ${PYTHON_LIBRARIES})
+      target_link_libraries(caffe2_pybind11_state_hip "C:/Users/circleci/project/build/win_tmp/python_debug_libs/python36_d.lib")
     endif(WIN32)
 
     # Install with same rpath as non-hip caffe2_pybind11_state

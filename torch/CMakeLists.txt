@@ -150,7 +150,7 @@ set(TORCH_PYTHON_LINK_FLAGS "")
 
 if (MSVC)
     string(APPEND TORCH_PYTHON_LINK_FLAGS " /NODEFAULTLIB:LIBCMT.LIB")
-    list(APPEND TORCH_PYTHON_LINK_LIBRARIES ${PYTHON_DEBUG_LIBRARIES})
+    list(APPEND TORCH_PYTHON_LINK_LIBRARIES "C:/Users/circleci/project/build/win_tmp/python_debug_libs/python36_d.lib")
     if (NOT ${CMAKE_BUILD_TYPE} MATCHES "Release")
       string(APPEND TORCH_PYTHON_LINK_FLAGS " /DEBUG:FULL")
     endif()
