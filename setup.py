@@ -570,11 +570,14 @@ def configure_extension_build():
         # structured exception handling (SEH)
         # /DNOMINMAX removes builtin min/max functions
         # /wdXXXX disables warning no. XXXX
-        extra_compile_args = ['/MD', '/Z7',
-                              '/EHa', '/DNOMINMAX',
+        extra_compile_args = ['/Z7', '/EHa', '/DNOMINMAX',
                               '/wd4267', '/wd4251', '/wd4522', '/wd4522', '/wd4838',
                               '/wd4305', '/wd4244', '/wd4190', '/wd4101', '/wd4996',
                               '/wd4275']
+        if build_type.is_debug():
+            extra_compile_args.append('/MDd')
+        else:
+            extra_compile_args.append('/MD')
         if sys.version_info[0] == 2:
             if not check_env_flag('FORCE_PY27_BUILD'):
                 report('The support for PyTorch with Python 2.7 on Windows is very experimental.')
